@@ -26,7 +26,9 @@ Route::middleware(['admin'])->group(function () {
     // Tambahkan route khusus admin lainnya
 });
 
-
+Route::get('/docs', function () {
+    return view('presentasi');
+})->name('presentasi');
 
 Auth::routes();
 

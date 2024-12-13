@@ -43,12 +43,11 @@
                         </button>
                         <div class="navbar-collapse collapse text-hover" id="slide-navbar-collapse">
                             <ul class="navbar-nav list-inline light text-uppercase">
-                                <li class="nav-item active"><a href="index.html" class="navlink">home</a></li>
-                                <li class="nav-item"><a href="about.html">about us</a></li>
-                                <li class="nav-item"><a href="trainer.html">trainers</a></li>
-                                <li class="nav-item"><a href="#">class</a></li>
-                                <li class="nav-item"><a href="">blog</a></li>
-                                <li class="nav-item"><a href="">contact us</a></li>
+                                <li class="nav-item active"><a href="#billboard" class="navlink">home</a></li>
+                                <li class="nav-item"><a href="#about">about us</a></li>
+                                <li class="nav-item"><a href="#membership">Membership</a></li>
+                                <li class="nav-item"><a href="{{route('presentasi')}}">Docs</a></li>
+                                <li class="nav-item"><a href="#contact">contact us</a></li>
                             </ul>
                             <ul class="navbar-nav list-inline light text-uppercase">
                                 @if (Route::has('login'))
@@ -117,7 +116,7 @@
                 </div>
             </section><!----#billboard----->
 
-            <section class="about-us padding-medium bg-sand">
+            <section id="about" class="about-us padding-medium bg-sand">
                 <div class="container">
                     <div class="row">
                         <div class="section-header text-center">
@@ -166,7 +165,7 @@
                 </div>
             </section>
 
-            <section class="membership padding-medium light front-dark">
+            <section id="membership" class="membership padding-medium light front-dark">
                 <div class="membership-wrapper padding-medium">
                     <h2 class="section-title text-center mb-4">Membership</h2>
                         <div class="container">
@@ -189,7 +188,7 @@
                                                 </ul>
                                             </div><!--inclusion-->
                                             <div class="meta-price">
-                                                <p><sup>$</sup><strong>30</strong><em>/month</em></p>
+                                                <p><sup>IDR</sup><strong>250K</strong><em>/month</em></p>
                                             </div>
                                         </div><!--text-content-->
                                     </div><!--membership-box-->
@@ -211,7 +210,7 @@
                                                 </ul>
                                             </div><!--inclusion-->
                                             <div class="meta-price">
-                                                <p><sup>$</sup><strong>45</strong><em>/month</em></p>
+                                                <p><sup>IDR</sup><strong>550K</strong><em>/month</em></p>
                                             </div>
                                         </div><!--text-content-->
                                     </div><!--membership-box-->
@@ -233,7 +232,7 @@
                                                 </ul>
                                             </div><!--inclusion-->
                                             <div class="meta-price">
-                                                <p><sup>$</sup><strong>60</strong><em>/month</em></p>
+                                                <p><sup>IDR</sup><strong>1.500K</strong><em>/month</em></p>
                                             </div>
                                         </div><!--text-content-->
                                     </div><!--membership-box-->
@@ -372,6 +371,32 @@
                         </div>
                     </div>
                 </section>
+
+                <section id="contact">
+                    <div class="container">
+                        <div class="row justify-content-center align-items-center vh-100">
+                            <div class="section-header text-center ">
+                                <h2 class="section-title pb-4">Contact Us</h2>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="contact-form">
+                                    <form action="https://formspree.io/f/xkgnaaew" method="post" id="contact-form">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="bg-black form-control" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea name="message" class="bg-black form-control" placeholder="Message"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" class="btn bg-black btn-primary" value="Send">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
 
 
                 <div class="footer-bottom  bg-black padding-small">

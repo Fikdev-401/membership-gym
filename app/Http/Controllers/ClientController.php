@@ -75,6 +75,32 @@ class ClientController extends Controller
         //
     }
 
+    public function updateStatus($id)
+    {
+        // Cari data client berdasarkan ID
+        $client = Client::findOrFail($id);
+
+        // Ubah status menjadi "Active"
+        $client->status = 'Active';
+        $client->save();
+
+        // Redirect dengan pesan sukses
+        return redirect()->back()->with('success', 'Status berhasil diubah menjadi Active.');
+    }
+
+    public function deleteUser($id)
+{
+    // Cari user berdasarkan ID
+    $client = Client::findOrFail($id);
+
+    // Hapus user
+    $client->delete();
+
+    // Redirect dengan pesan sukses
+    return redirect()->back()->with('success', 'User berhasil dihapus.');
+}
+
+
     /**
      * Remove the specified resource from storage.
      */

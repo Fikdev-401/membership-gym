@@ -30,8 +30,13 @@ class HomeController extends Controller
     }
 
     public function admin() {
+        // ambil data client
         $dataMember = Client::all();
+
+        // ambil data pendaftaran
         $dataPendaftaran = Client::count();
+
+        // ambil data user
         $dataUser = User::count();
         return view('pages.dashboard', compact('dataUser', 'dataPendaftaran', 'dataMember'));
     }
